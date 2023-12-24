@@ -9,3 +9,7 @@ RUN apt-get update -qq \
     && apt-get -y install --no-install-recommends make build-essential git \
     && apt-get clean \
     && rm -rf /var/lib/apt/lists/*
+WORKDIR /workspace
+COPY Gemfile /workspace/Gemfile
+COPY Gemfile.lock /workspace/Gemfile.lock
+RUN bundle install

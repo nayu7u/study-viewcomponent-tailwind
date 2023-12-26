@@ -13,3 +13,4 @@ WORKDIR /workspace
 COPY Gemfile /workspace/Gemfile
 COPY Gemfile.lock /workspace/Gemfile.lock
 RUN bundle install
+RUN gem install foreman

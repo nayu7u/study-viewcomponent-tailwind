@@ -13,3 +13,9 @@ if Book.none?
     Book.create!(title: "book_#{i}")
   end
 end
+
+if Author.none?
+  5.times.each do |i|
+    Author.create!(name: "author_#{i}")
+  end
+end

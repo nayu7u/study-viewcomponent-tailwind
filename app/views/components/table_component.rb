@@ -1,9 +1,9 @@
 # frozen_string_literal: true
 
 class TableComponent < ViewComponent::Base
-  def initialize(header:, column:)
-    @header = header
-    @column = column
+  def initialize(headers:, columns:)
+    @headers = headers
+    @columns = columns
   end
 
 end

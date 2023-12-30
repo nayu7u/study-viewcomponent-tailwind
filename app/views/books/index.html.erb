@@ -5,9 +5,9 @@
 
   <%= render(
     TableComponent.new(
-      headers: %w[title created_at updated_at],
+      headers: %w[title author created_at updated_at],
       columns: @books.map { |book|
-        [book.title, book.created_at, book.updated_at]
+        [book.title, book.author.name, book.created_at, book.updated_at]
         .map(&:to_s)
       }
     )

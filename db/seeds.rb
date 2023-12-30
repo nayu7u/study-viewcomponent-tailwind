@@ -8,14 +8,17 @@
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
 
-if Book.none?
-  5.times.each do |i|
-    Book.create!(title: "book_#{i}")
-  end
-end
-
 if Author.none?
   5.times.each do |i|
     Author.create!(name: "author_#{i}")
+  end
+end
+
+if Book.none?
+  5.times.each do |i|
+    Book.create!(
+      title: "book_#{i}",
+      author: Author.find_by(name: "author_#{i}"),
+    )
   end
 end
